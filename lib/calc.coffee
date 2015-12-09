@@ -148,7 +148,7 @@ module.exports = Calc =
 			result = @calculateResult( sel.getText() )
 			if not result?
 				return
-			if not isNaN(result)
+			if result === parseInt(result, 10)
 				result.toFixed(4)
 			return result
 		)
