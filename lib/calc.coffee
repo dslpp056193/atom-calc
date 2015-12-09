@@ -148,7 +148,8 @@ module.exports = Calc =
 			result = @calculateResult( sel.getText() )
 			if not result?
 				return
-
+			if not isNaN(result)
+				result.toFixed(4)
 			return result
 		)
 
